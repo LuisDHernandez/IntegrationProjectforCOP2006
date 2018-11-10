@@ -1,6 +1,6 @@
 
 public class HeroRanking {
-	public static void TheHeroRank(int Reputation) {
+	public static String TheHeroRank(int Reputation) {
 		// method to solve for HeroRank
 	 // this statement will expand to cover other heroranks and assign a
       // title to
@@ -23,7 +23,8 @@ public class HeroRanking {
 		// final does not allow me to change the value of theherorank
 		final String THE_HERO_RANK = HeroRank;
 
-		System.out.println("Your Hero Rank is: " + THE_HERO_RANK);
+		//System.out.println("Your Hero Rank is: " + THE_HERO_RANK);
+        return THE_HERO_RANK;
 
 	}
 

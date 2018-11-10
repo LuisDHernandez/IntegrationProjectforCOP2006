@@ -58,7 +58,7 @@ public class Main {
         // in the
         // code
         Random randomSkill = new Random();
-        //i love VanSelow
+        // i love VanSelow
         // and chocolates
 
         int Strength = randomSkill.nextInt((10)) + 1;
@@ -89,7 +89,6 @@ public class Main {
         // the end of
         // the minigame
         int Reputation = 0;
-        // String HeroRank = "";
 
         System.out.println(
                 "To succesfully help and gain Rep, answer the following:\n" + " What's 2+2 = ?");
@@ -132,6 +131,7 @@ public class Main {
                     System.out
                             .println("Good job! You caught the criminal and became" + " a stronger "
                                     + "hero! \n Agility : " + Agility + "\n Rep: " + Reputation);
+                    
 
                 } else {
                     Reputation--;
@@ -151,22 +151,39 @@ public class Main {
                     + "dismayed, there are plenty of " + "oppertunities waiting!\n Rep: "
                     + Reputation);
         }
+        
+
         System.out.println("oh no....." + "There's a meteor crashing into the Earth!"
                 + " Activate the Comet Cannon by answering this riddle!"
-                + " I am a symbol. A number that is always smaller" + " or bigger, with no "
+                + " I am a symbol. \nA number that is always smaller" + " or bigger, with no "
                 + "definite end. " + "What am I?");
+        scan.nextLine();
+        //user inputs correct answer no matter what lettercase
         String userAnswer = scan.nextLine();
         userAnswer.trim();
-        UltimateCannon.theUltimateAnswer(userAnswer,Reputation,userName);
+        //goes to separate method and sets final mission
+        int theAnswerFromPlayer = userAnswer.length();
 
-        System.out.println("More missions are coming your way!");
+        if (theAnswerFromPlayer == 8) {
+            Reputation += 4;
+            System.out.println("Amazing! You did it! The meteor was blown to pieces! "
+                    + "You saved " + "the Earth! Thank you, " + userName + "!");
+
+        } else {
+            System.out.println("It's too late.... we're done for!!!");
+            Reputation -= 4;
+        }
+        //System.out.println("More missions are coming your way!");
+        Character Player = new Character(userName);
+        Player.setName(userName);
+        
+        //System.out.println("You are: " + Player.getName() + ".");
+        //String trueHero = HeroRanking.TheHeroRank(Reputation);
+        //by combining the above code, it's more efficient and clean
+        String trueHero = HeroRanking.TheHeroRank(Reputation);
+        System.out.println("You are " + Player.getName() + " and you are a "+ trueHero+"!");
 
         scan.close();
-
-        /*Character Player = new Character(userName);
-        Player.setName(userName);
-        System.out.println("You are: " + Player.getName() + ".");
-        HeroRanking.TheHeroRank(Reputation);*/
 
     }
 
