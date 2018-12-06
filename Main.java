@@ -6,11 +6,13 @@ import java.util.Scanner;
 //more.
 
 public class Main {
-    
+
     /**
      * the driver class that runs my minigame.
-     * <p>This program runs as an input based game that progresses as the user inputs answers.
-     * Overall, this is a basic program to show my growth in programming. 
+     * <p>
+     * This program runs as an input based game that progresses as the user inputs
+     * answers. Overall, this is a basic program to show my growth in programming.
+     * 
      * @param args
      */
 
@@ -138,7 +140,6 @@ public class Main {
                     System.out
                             .println("Good job! You caught the criminal and became" + " a stronger "
                                     + "hero! \n Agility : " + Agility + "\n Rep: " + Reputation);
-                    
 
                 } else {
                     Reputation--;
@@ -158,38 +159,38 @@ public class Main {
                     + "dismayed, there are plenty of " + "oppertunities waiting!\n Rep: "
                     + Reputation);
         }
-        
 
         System.out.println("oh no....." + "There's a meteor crashing into the Earth!"
                 + " Activate the Comet Cannon by answering this riddle!"
                 + " I am a symbol. \nA number that is always smaller" + " or bigger, with no "
                 + "definite end. " + "What am I?");
         scan.nextLine();
-        //user inputs correct answer no matter what lettercase
+        // user inputs correct answer no matter what lettercase
         String userAnswer = scan.nextLine();
         userAnswer.trim();
-        //goes to separate method and sets final mission
-        int theAnswerFromPlayer = userAnswer.length();
+        // goes to separate method and sets final mission
 
-        if (theAnswerFromPlayer == 8) {
-            Reputation += 4;
-            System.out.println("Amazing! You did it! The meteor was blown to pieces! "
-                    + "You saved " + "the Earth! Thank you, " + userName + "!");
+        UltimateCannon.theUltimateAnswer(userAnswer, Reputation, userName);
 
-        } else {
-            System.out.println("It's too late.... we're done for!!!");
-            Reputation -= 4;
-        }
-        //System.out.println("More missions are coming your way!");
+        // System.out.println("More missions are coming your way!");
         Character Player = new Character(userName);
         Player.setName(userName);
-        
-        //System.out.println("You are: " + Player.getName() + ".");
-        //String trueHero = HeroRanking.TheHeroRank(Reputation);
-        //by combining the above code, it's more efficient and clean
-        String trueHero = HeroRanking.TheHeroRank(Reputation);
-        System.out.println("You are " + Player.getName() + " and you are a "+ trueHero+"!");
 
+        // System.out.println("You are: " + Player.getName() + ".");
+        // String trueHero = HeroRanking.TheHeroRank(Reputation);
+        // by combining the above code, it's more efficient and clean
+        String trueHero = HeroRanking.TheHeroRank(Reputation);
+        System.out.println("You are " + Player.getName() + " and you are a " + trueHero + "!");
+
+        
+        System.out.println("This is the Post Game that goes through different coding concepts that"
+                + "weren't covered in the main program.");
+        System.out.println("Here is an example of a while loop and right after, a do-while loop");
+        DoWhileandWhile.MathBuddies();
+        
+        DoWhileandWhile.PlugAndChug();
+        
+        
         scan.close();
 
     }
