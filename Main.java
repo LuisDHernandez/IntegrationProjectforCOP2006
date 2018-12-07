@@ -221,10 +221,15 @@ public class Main {
         //Inheritance is where a class is derived from a based class and also shares the same 
         //fields from that parent class 
         //"is a" relationship is a perfect example of inheritance (a cat is an animal)
+        // the biggest benefit is being able to use extensive object oriented programming
+        // with just one block of code as the base
         
         System.out.println("This next portion will cover polymorphism and inheritance!");
         
-        
+        Penguin Larry = new Penguin();
+        Larry.AnimalSpecies();
+        Larry.SpeciesNoise();
+        Larry.PenguinSwims();
 
         
 
