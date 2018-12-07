@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -182,15 +183,51 @@ public class Main {
         String trueHero = HeroRanking.TheHeroRank(Reputation);
         System.out.println("You are " + Player.getName() + " and you are a " + trueHero + "!");
 
-        
         System.out.println("This is the Post Game that goes through different coding concepts that"
                 + "weren't covered in the main program.");
         System.out.println("Here is an example of a while loop and right after, a do-while loop");
         DoWhileandWhile.MathBuddies();
-        
+
         DoWhileandWhile.PlugAndChug();
+
+        System.out.println("This next part will tackle exception handling.");
+        //Exceptions code is below
+
+        int inputA;
+        int inputB;
+
+        boolean perfectinput = false;
+
+        while (perfectinput == false) {
+            System.out.println("Enter first number");
+            try {
+                inputA = scan.nextInt();
+                inputB = scan.nextInt();
+                int mathinput = inputA / inputB ;
+                System.out.println("Your first input divided by your second input as an int "
+                        + "is"+mathinput+".");
+                perfectinput = true;
+            } catch (InputMismatchException notAnInt) {
+                System.out.println("Requires an integer, please try again.");
+                scan.nextLine();
+            }
+            catch (ArithmeticException dividedByZero) {
+                System.out.println("You cannot divide by zero, please input a different second "
+                        + "integer.");
+                scan.nextLine();
+            }
+        }
+        
+        //Inheritance is where a class is derived from a based class and also shares the same 
+        //fields from that parent class 
+        //"is a" relationship is a perfect example of inheritance (a cat is an animal)
+        
+        System.out.println("This next portion will cover polymorphism and inheritance!");
         
         
+
+        
+
         scan.close();
 
     }

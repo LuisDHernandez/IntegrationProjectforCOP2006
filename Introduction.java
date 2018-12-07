@@ -1,9 +1,6 @@
 
 public class Introduction {
-    /**
-     * @author LuisD.Hernandez
-     * 
-     */
+   
 
 // this is a header for a method but no parameters
     

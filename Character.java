@@ -1,7 +1,5 @@
 public class Character {
-    /**
-     * @author LuisD.Hernandez
-     */
+    
 
 	private String name;
 
