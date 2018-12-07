@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -191,7 +192,7 @@ public class Main {
         DoWhileandWhile.PlugAndChug();
 
         System.out.println("This next part will tackle exception handling.");
-        //Exceptions code is below
+        // Exceptions code is below
 
         int inputA;
         int inputB;
@@ -203,35 +204,56 @@ public class Main {
             try {
                 inputA = scan.nextInt();
                 inputB = scan.nextInt();
-                int mathinput = inputA / inputB ;
-                System.out.println("Your first input divided by your second input as an int "
-                        + "is"+mathinput+".");
+                int mathinput = inputA / inputB;
+                System.out.println("Your first input divided by your second input as an int " + "is"
+                        + mathinput + ".");
                 perfectinput = true;
             } catch (InputMismatchException notAnInt) {
                 System.out.println("Requires an integer, please try again.");
                 scan.nextLine();
-            }
-            catch (ArithmeticException dividedByZero) {
-                System.out.println("You cannot divide by zero, please input a different second "
-                        + "integer.");
+            } catch (ArithmeticException dividedByZero) {
+                System.out.println(
+                        "You cannot divide by zero, please input a different second " + "integer.");
                 scan.nextLine();
             }
         }
-        
-        //Inheritance is where a class is derived from a based class and also shares the same 
-        //fields from that parent class 
-        //"is a" relationship is a perfect example of inheritance (a cat is an animal)
-        // the biggest benefit is being able to use extensive object oriented programming
+
+        // Inheritance is where a class is derived from a based class and also shares
+        // the same
+        // fields from that parent class
+        // "is a" relationship is a perfect example of inheritance (a cat is an animal)
+        // the biggest benefit is being able to use extensive object oriented
+        // programming
         // with just one block of code as the base
-        
+
         System.out.println("This next portion will cover polymorphism and inheritance!");
-        
+
         Penguin Larry = new Penguin();
         Larry.AnimalSpecies();
         Larry.SpeciesNoise();
         Larry.PenguinSwims();
 
+        System.out.println("The above text is all inheritance and polymorphism from "
+                + "the derived class Animal to the class Penguin.");
         
+        ArrayList<String> groceries = new ArrayList<String>();   
+        groceries.add("Eggs"); // adds item to the grocery list
+        groceries.add("Milk");
+        groceries.add("Bread");
+        groceries.add("Chocolate Chip Cookies");
+        int pos = groceries.indexOf("Eggs");  // gets the position that matches argument
+        int size = groceries.size();  // returns the size 
+        String item = groceries.get(2);  // returns element at index location 
+        for (int i = 0; i < groceries.size(); i++) {
+            System.out.println("Index: " + i + " - Item: " + groceries.get(i));
+        }
+        for (String str : groceries) {
+            System.out.println("Item is: " + str);
+        }
+        System.out.println("The position of Eggs in the ArrayList is "+ pos +", and the "
+                + "total size of the ArrayList is "+ size+ " and using the get method,"
+                        + " we can pick an item in the ArrayList like " + item+".");
+
 
         scan.close();
 

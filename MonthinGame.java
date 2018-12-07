@@ -12,8 +12,7 @@ public class MonthinGame {
 
         String theMonth;
 
-        
-            switch (month) {
+        switch (month) {
             case 1:
                 theMonth = "January";
                 break;
@@ -56,5 +55,5 @@ public class MonthinGame {
         }
         return theMonth;
     }
-        
+
 }
