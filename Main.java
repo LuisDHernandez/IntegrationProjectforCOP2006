@@ -253,6 +253,10 @@ public class Main {
         System.out.println("The position of Eggs in the ArrayList is "+ pos +", and the "
                 + "total size of the ArrayList is "+ size+ " and using the get method,"
                         + " we can pick an item in the ArrayList like " + item+".");
+        
+        System.out.println("This concludes my minigame and coding project, however, I would like "
+                + "to thank you for coming along this learning journey with me. With "
+                + "hardwork, my programming skills can only improve! Thank you and goodbye.");
 
 
         scan.close();
